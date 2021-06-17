@@ -28,6 +28,7 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
         OAuth2UserService<OAuth2UserRequest, OAuth2User>
                 delegate = new DefaultOAuth2UserService();
         OAuth2User oAuth2User = delegate.loadUser(userRequest);
+
         String registrationId = userRequest.getClientRegistration().getRegistrationId(); //구글에서만 사용하는 값으로 로그인 진행 서비스 구분.
         String userNameAttributeName = userRequest.getClientRegistration().getProviderDetails()
                 .getUserInfoEndpoint().getUserNameAttributeName(); //OAuth2로그인 진행시 키가 되는 필드값. pk와 같은 의미. 구글의 경우 기본적 코드 지원. 네이버 카카오는 x 구글은 "sub"
