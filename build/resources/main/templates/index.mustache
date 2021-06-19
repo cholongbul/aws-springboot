@@ -8,7 +8,7 @@
         <div class="col-md-6">
             <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
             {{#userName}} <!--머스테치는 다른 언어와 같은 if문 없음. true/false여부만 판단. 최종값만 넘겨줌. userName이 있는가만 체크 -->
-                Logged in as: <span id="user">{{userName}}</span>
+                Logged in as: <span id="user1">{{userName}}</span>
             <a href="/logout" class="btn btn-info active"
                role="button">Logout</a> <!--스프링 시큐리티에서 기본적으로 제공하는 로그아웃 URL-->
             {{/userName}}

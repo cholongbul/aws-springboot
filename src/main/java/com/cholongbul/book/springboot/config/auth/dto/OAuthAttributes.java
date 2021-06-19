@@ -1,7 +1,7 @@
 package com.cholongbul.book.springboot.config.auth.dto;
 
 import com.cholongbul.book.springboot.domain.user.Role;
-import com.cholongbul.book.springboot.domain.user.User;
+import com.cholongbul.book.springboot.domain.user.User1;
 import lombok.Builder;
 import lombok.Getter;
 
@@ -56,9 +56,9 @@ public class OAuthAttributes {
    }
 
    //User엔티티 생성. OauthAttributes에서 엔티티를 생성하는 시점은 처음 가입할 때. 가입할 때 기본 권한을 GUEST로 wna.
-   public User toEntity() {
-      return User.builder()
-              .name(name)
+   public User1 toEntity() {
+      return User1.builder()
+              .u_name(name)
               .email(email)
               .picture(picture)
               .role(Role.GUEST)
